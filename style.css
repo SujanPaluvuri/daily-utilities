@@ -1,0 +1,88 @@
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);
+    color: #333;
+}
+
+header {
+    text-align: center;
+    padding: 60px 20px 40px;
+    color: #feffff;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+header h1 {
+    margin: 0;
+    font-size: 2.8rem;
+}
+header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.utilities {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto 50px;
+}
+
+.card {
+    background: linear-gradient(145deg, #ffffff, #e6f0ff);
+    border-radius: 20px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+    color: #222;
+}
+.card h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.6rem;
+    color: #222;
+}
+.card p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+.card a {
+    text-decoration: none;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.3s;
+}
+.card a:hover {
+    background: linear-gradient(135deg, #2575fc, #6a11cb);
+    transform: translateY(-2px);
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    background: linear-gradient(145deg, #f0f4ff, #d9e6ff);
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background: rgba(0,0,0,0.3);
+    font-size: 0.85rem;
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 480px) {
+    .card {
+        padding: 20px 15px;
+    }
+    header h1 {
+        font-size: 2rem;
+    }
+}

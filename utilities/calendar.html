@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Calendar</title>
+  <link rel="stylesheet" href="calendar.css">
+</head>
+<body>
+  <header>
+    <h1>📅 Event Calendar</h1>
+    <p>Track and manage your daily events easily</p>
+  </header>
+
+  <main class="calendar-container">
+    <div class="calendar-header">
+      <button id="prev">⬅</button>
+      <h2 id="month-year"></h2>
+      <button id="next">➡</button>
+    </div>
+
+    <div class="calendar-grid">
+      <div class="day">Sun</div>
+      <div class="day">Mon</div>
+      <div class="day">Tue</div>
+      <div class="day">Wed</div>
+      <div class="day">Thu</div>
+      <div class="day">Fri</div>
+      <div class="day">Sat</div>
+      <div id="dates"></div>
+    </div>
+
+    <div class="event-section">
+      <h3 id="selected-date"></h3>
+      <ul id="event-list"></ul>
+
+      <form id="event-form">
+        <input type="text" id="event-input" placeholder="Add event..." required>
+        <button type="submit">➕ Add</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>Daily Utility Hub © 2025</p>
+  </footer>
+
+  <script src="calendar.js"></script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+/* ===== General Styles ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* ===== Container ===== */
+.container {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    border-radius: 25px;
+    padding: 40px 30px;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+}
+
+/* ===== Header ===== */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+/* ===== Quote Box ===== */
+#quote-box {
+    background: rgba(255,255,255,0.1);
+    border-radius: 20px;
+    padding: 30px 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#quote-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+}
+
+#quote-box p {
+    font-size: 1.2rem;
+    margin: 15px 0;
+    line-height: 1.5;
+}
+
+#quote {
+    font-weight: 600;
+}
+
+#author {
+    font-style: italic;
+    opacity: 0.8;
+}
+
+/* ===== Button ===== */
+#new-quote {
+    margin-top: 20px;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #ff6b6b, #f06595);
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+#new-quote:hover {
+    transform: translateY(-2px) scale(1.05);
+    background: linear-gradient(135deg, #f06595, #ff6b6b);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+    .container {
+        padding: 30px 20px;
+    }
+
+    #quote-box {
+        padding: 20px 15px;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    #quote-box p {
+        font-size: 1rem;
+    }
+
+    #new-quote {
+        padding: 10px 20px;
+        font-size: 0.95rem;
+    }
+}

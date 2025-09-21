@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interest Calculator</title>
+    <link rel="stylesheet" href="interest.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>💵 Interest Calculator</h2>
+
+        <!-- Interest Type Selection -->
+        <label>Select Interest Type:</label>
+        <div class="interest-type">
+            <input type="radio" name="interestType" value="simple" id="simple" checked>
+            <label for="simple">Simple Interest</label>
+            <input type="radio" name="interestType" value="compound" id="compound">
+            <label for="compound">Compound Interest</label>
+        </div>
+
+        <!-- Input Fields -->
+        <label>Principal Amount (₹):</label>
+        <input type="number" id="principal" placeholder="Enter amount" required>
+
+        <label>Rate of Interest (%):</label>
+        <input type="number" id="rate" placeholder="Enter interest rate" required>
+
+        <label>Time Period (years):</label>
+        <input type="number" id="time" placeholder="Enter time in years" required>
+
+        <!-- Compounding Frequency -->
+        <div id="frequency-container" style="display: none;">
+            <label>Compounding Frequency:</label>
+            <select id="frequency">
+                <option value="1">Annually</option>
+                <option value="2">Semi-Annually</option>
+                <option value="4">Quarterly</option>
+                <option value="12">Monthly</option>
+            </select>
+        </div>
+
+        <!-- Buttons -->
+        <button id="calculateBtn">Calculate</button>
+        <button id="downloadPDF" style="display: none;">Download PDF</button>
+
+        <!-- Result -->
+        <div id="result"></div>
+
+        <!-- Past Calculations -->
+        <h3>Past Calculations:</h3>
+        <ul id="history"></ul>
+    </div>
+
+    <script src="interest.js"></script>
+</body>
+</html>

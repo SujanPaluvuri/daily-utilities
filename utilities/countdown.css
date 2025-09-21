@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: #f0f4f8;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 30px 0;
+}
+
+.hub-card {
+  width: 90%;
+  max-width: 450px;
+  background: linear-gradient(145deg, #ffffff, #f1f4f9);
+  border-radius: 20px;
+  padding: 25px 30px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+header p {
+  color: #555;
+  margin-top: 5px;
+  font-size: 0.95rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+form input, form button {
+  padding: 12px 15px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s;
+}
+
+form input:hover {
+  border-color: #4caf50;
+}
+
+form button {
+  background: linear-gradient(135deg, #4caf50, #81c784);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background: linear-gradient(135deg, #388e3c, #66bb6a);
+}
+
+#reminder-list {
+  list-style: none;
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 0;
+}
+
+#reminder-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+#reminder-list li:hover {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.reminder-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.reminder-title {
+  font-weight: 600;
+  color: #333;
+}
+
+.reminder-countdown {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 2px;
+}
+
+.reminder-actions button {
+  background-color: #e0e0e0;
+  border: none;
+  padding: 5px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-left: 5px;
+  transition: 0.2s;
+}
+
+.reminder-actions button:hover {
+  background-color: #ccc;
+}
+
+#empty-msg {
+  text-align: center;
+  color: #777;
+  margin-top: 10px;
+  display: none;
+}

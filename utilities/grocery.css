@@ -1,0 +1,179 @@
+/* ===== General ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 10px;
+}
+
+/* ===== Container ===== */
+.grocery-container {
+    width: 100%;
+    max-width: 500px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 25px 20px;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+    color: #333;
+}
+
+/* ===== Header ===== */
+header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+header p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* ===== Form Section ===== */
+.form-section {
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+form input {
+    flex: 1 1 48%;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    outline: none;
+}
+
+form button {
+    flex: 1 1 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background: #4caf50;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+form button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+/* ===== Grocery List Section ===== */
+.list-section {
+    max-height: 350px;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+#grocery-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    background-color: #f9f9f9;
+    font-size: 1rem;
+    font-weight: 500;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#grocery-list li.bought {
+    opacity: 0.6;
+    text-decoration: line-through;
+}
+
+#grocery-list li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* ===== Item Actions ===== */
+.item-actions button {
+    background-color: #e0e0e0;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    font-size: 0.85rem;
+    margin-left: 8px;
+    padding: 5px 10px;
+    border-radius: 8px;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.item-actions button:hover {
+    background-color: #ccc;
+    transform: scale(1.1);
+}
+
+.item-actions button:first-child {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+.item-actions button:first-child:hover {
+    background-color: #45a049;
+}
+
+/* ===== Scrollbar Styling ===== */
+#grocery-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+#grocery-list::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#grocery-list::-webkit-scrollbar-thumb {
+    background: #4caf50;
+    border-radius: 10px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 450px) {
+    form input {
+        flex: 1 1 100%;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header p {
+        font-size: 0.85rem;
+    }
+
+    #grocery-list li {
+        font-size: 0.95rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .item-actions {
+        display: flex;
+        gap: 5px;
+    }
+}

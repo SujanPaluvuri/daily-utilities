@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Countdown Reminders</title>
+  <link rel="stylesheet" href="countdown.css">
+</head>
+<body>
+  <div class="hub-card">
+    <header>
+      <h1>⏳ Countdown Reminders</h1>
+      <p>Set reminders and watch the countdown!</p>
+    </header>
+
+    <section class="form-section">
+      <form id="reminder-form">
+        <input type="text" id="title" placeholder="Reminder Title" required>
+        <input type="datetime-local" id="datetime" required>
+        <button type="submit">Add Reminder</button>
+      </form>
+    </section>
+
+    <section class="list-section">
+      <ul id="reminder-list"></ul>
+      <p id="empty-msg">No active reminders</p>
+    </section>
+  </div>
+
+  <script src="countdown.js"></script>
+</body>
+</html>

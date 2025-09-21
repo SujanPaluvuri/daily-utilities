@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Planner</title>
+    <link rel="stylesheet" href="planner.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="planner-container">
+        <header>
+            <h1>📅 Daily Planner</h1>
+            <p>Organize your day efficiently</p>
+        </header>
+
+        <!-- Task Form -->
+        <section class="form-section">
+            <h2>Add New Task</h2>
+            <form id="task-form">
+                <input type="text" id="task-title" placeholder="Task Title" required>
+                <input type="text" id="task-desc" placeholder="Description">
+                <input type="time" id="task-time" required>
+                <button type="submit">Add Task</button>
+            </form>
+        </section>
+
+        <!-- Filter & Task List -->
+        <section class="list-section">
+            <div class="list-header">
+                <h2>Tasks</h2>
+                <select id="filter">
+                    <option value="all">All</option>
+                    <option value="pending">Pending</option>
+                    <option value="completed">Completed</option>
+                </select>
+            </div>
+            <ul id="task-list"></ul>
+        </section>
+    </div>
+
+    <script src="planner.js"></script>
+</body>
+</html>

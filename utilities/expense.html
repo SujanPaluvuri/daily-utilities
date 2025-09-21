@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="expense.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <h1>💰 Expense Tracker</h1>
+      <p>Track your income & expenses smartly</p>
+    </header>
+
+    <!-- Balance Dashboard -->
+    <section class="balance-section">
+      <div class="card income">
+        <h3>Income</h3>
+        <p id="total-income">₹0</p>
+      </div>
+      <div class="card expense">
+        <h3>Expenses</h3>
+        <p id="total-expense">₹0</p>
+      </div>
+      <div class="card balance">
+        <h3>Balance</h3>
+        <p id="net-balance">₹0</p>
+      </div>
+    </section>
+
+    <!-- Chart Section -->
+    <section class="chart-section">
+      <h2>💹 Income vs Expense</h2>
+      <canvas id="expenseChart"></canvas>
+    </section>
+
+    <!-- Add Expense/Income Form -->
+    <section class="form-section">
+      <h2>Add Transaction</h2>
+      <form id="expense-form">
+        <select id="type" required>
+          <option value="income">Income</option>
+          <option value="expense">Expense</option>
+        </select>
+        <input type="number" id="amount" placeholder="Amount (₹)" required>
+        <input type="text" id="category" placeholder="Category (e.g. Salary, Food)" required>
+        <input type="text" id="description" placeholder="Description">
+        <button type="submit">Add</button>
+      </form>
+    </section>
+
+    <!-- Filter + Transactions List -->
+    <section class="list-section">
+      <div class="list-header">
+        <h2>Transaction History</h2>
+        <select id="filter">
+          <option value="all">All</option>
+          <option value="income">Income</option>
+          <option value="expense">Expense</option>
+        </select>
+      </div>
+      <ul id="expense-list"></ul>
+    </section>
+  </div>
+
+  <script src="expense.js"></script>
+</body>
+</html>

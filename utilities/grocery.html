@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery List</title>
+    <link rel="stylesheet" href="grocery.css">
+</head>
+<body>
+    <div class="grocery-container">
+        <header>
+            <h1>🛒 Grocery List</h1>
+            <p>Keep track of your groceries easily</p>
+        </header>
+
+        <section class="form-section">
+            <form id="grocery-form">
+                <input type="text" id="item-name" placeholder="Item name" required>
+                <input type="number" id="item-quantity" placeholder="Quantity" min="1" required>
+                <button type="submit">Add Item</button>
+            </form>
+        </section>
+
+        <section class="list-section">
+            <ul id="grocery-list"></ul>
+        </section>
+    </div>
+
+    <script src="grocery.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quick Converters & BMI</title>
+  <link rel="stylesheet" href="converters.css">
+</head>
+<body>
+  <div class="hub-card">
+    <header>
+      <h1>🔄 Quick Converters & BMI</h1>
+      <p>Choose a tool and get instant results</p>
+    </header>
+
+    <div class="converter-selection">
+      <label for="converter-type">Select Tool:</label>
+      <select id="converter-type">
+        <option value="">-- Select --</option>
+        <option value="currency">Currency</option>
+        <option value="temperature">Temperature</option>
+        <option value="length">Length</option>
+        <option value="weight">Weight</option>
+        <option value="volume">Volume</option>
+        <option value="bmi">BMI Calculator</option>
+      </select>
+    </div>
+
+    <div class="converter-form" id="converter-form"></div>
+
+    <div class="converter-result">
+      <h2>Result:</h2>
+      <p id="result">--</p>
+    </div>
+  </div>
+
+  <script src="converters.js"></script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+/* ===== General ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: #f0f4f8; /* simple light background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Container */
+.habit-container {
+  width: 90%;
+  max-width: 500px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  color: #333;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+header p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Form Section */
+.form-section {
+  margin-bottom: 25px;
+}
+
+form {
+  display: flex;
+  gap: 10px;
+}
+
+form input {
+  flex: 1;
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  outline: none;
+}
+
+form input::placeholder {
+  color: #aaa;
+}
+
+form button {
+  padding: 12px 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: #4caf50;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background-color: #45a049;
+}
+
+/* List Section */
+.list-section h2 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  color: #222;
+}
+
+#habit-list {
+  list-style: none;
+  max-height: 350px;
+  overflow-y: auto;
+}
+
+#habit-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#habit-list li.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.habit-actions button {
+  background-color: #e0e0e0;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-left: 8px;
+  padding: 5px 8px;
+  border-radius: 8px;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.habit-actions button:hover {
+  background-color: #ccc;
+  transform: scale(1.1);
+}
+
+/* Scrollbar Style */
+#habit-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+#habit-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#habit-list::-webkit-scrollbar-thumb {
+  background: #4caf50;
+  border-radius: 10px;
+}
